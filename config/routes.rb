@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
+
 #root
-  root 'products#index'     #home page
+  root 'home#index'     #home page
 
 #reset password
   # get '/password_resets' => 'password_reset#new'
