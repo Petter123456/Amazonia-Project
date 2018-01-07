@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
+
 #root
-  root 'sessions#new'
+  root 'home#index'     #home page
 
 #reset password
   # get '/password_resets' => 'password_reset#new'
@@ -17,14 +18,11 @@ Rails.application.routes.draw do
   get '/order' => 'order_items#index'
   get '/cart' => 'carts#show'
 
+  resources :users
+
   resources :order_items
-
-
-  #
-
   resource :cart, only: [:show]
 
-  resources :user
   resources :sessions
   resources :password_resets
 
