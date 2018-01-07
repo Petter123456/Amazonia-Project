@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 #root
-  root 'sessions#new'
+  root 'products#index'     #home page
 
 #reset password
   # get '/password_resets' => 'password_reset#new'
@@ -15,7 +15,6 @@ Rails.application.routes.draw do
 
 #path from signup
   get '/products' => 'products#index'
-
 
   resources :users
   resources :sessions
