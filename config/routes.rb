@@ -14,10 +14,17 @@ Rails.application.routes.draw do
   post '/signup' => 'user#create'
 
 #path from signup
-  get '/products' => 'products#index'
+  get '/order' => 'order_items#index'
+  get '/cart' => 'carts#show'
+
+  resources :order_items
 
 
-  resources :users
+  #
+
+  resource :cart, only: [:show]
+
+  resources :user
   resources :sessions
   resources :password_resets
 
