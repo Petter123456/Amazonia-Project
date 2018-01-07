@@ -1,35 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Rainforest</title>
 
     <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+</head>
+<body>
+ 
+    <div class="header">
+      <% if current_user %>
+      Welcome <%= current_user.name %> | <%= link_to "logout", '/logout' %>
+      <% else %>
+      <%= link_to "Login", '/login' %> | <%= link_to "Sign-up", '/signup' %>
+      <% end %>
+    </div>
 
-  </head>
-    <body>
+    <!-- <%= form_tag(products_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "" %>
+        <%= submit_tag "Search", :name => nil %>
+    <% end %> -->
 
-      <%= yield %> <!-- All other views in app proccesses through <%= yield %> -->
-
-
-        <div class="header">
-            <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-            <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-            <% if current_user %>
-            Welcome <%= current_user.name %> | <%= link_to "logout", '/logout' %>
-            <% else %>
-            <%= link_to "Login", '/login' %> | <%= link_to "Sign-up", '/signup' %>
-            <% end %>
-
-            <%= form_tag(products_path, :method => "get", id: "search-form") do %>
-                <%= text_field_tag :search, params[:search], placeholder: "" %>
-                <%= submit_tag "Search", :name => nil %>
-
-            <% end %>
-        </div>
-
-
-
-
-  </body>
+    <%= yield %>
+</body>
 </html>
