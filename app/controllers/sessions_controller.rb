@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
   #   redirect_to '/login'
   # end
 
-
   def create
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
@@ -20,10 +19,11 @@ class SessionsController < ApplicationController
       else
         flash.now.alert = "Invalid email or password"
       end
-    else
+   else
       redirect_to '/login'
     end
   end
+end
 
 
   def destroy
