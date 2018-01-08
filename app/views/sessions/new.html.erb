@@ -1,5 +1,9 @@
 
 
+<button id="back"><%= link_to 'Back to Amazonia.com', root_path %></button>
+
+
+
 
 <div class="wrapper" background = "white">
   <div class="box1"><h1>Sign In</h1>
@@ -11,5 +15,5 @@
     <% end %>
       <p id="checkbox"><%= check_box_tag :remember_me, 1, params[:remember_me] %></p>
       <p id="checkbox_label"><%= label_tag :remember_me %></p>
-      <button>Sign-Up!</button></div>
+      <button id="signup"><%= link_to 'Sign Up!', '/signup' %></button></div>
 </div>
