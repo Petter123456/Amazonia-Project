@@ -1,6 +1,6 @@
 <% if @order_items.any? %>
   <% @order_items.each do |item| %>
-    <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"} %></p>
+    <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You a broke bitch", :method => "delete"} %></p>
     <p> Unit Price: <%= item.product.price_in_cents %> | Total Price: <%= (item.product.price_in_cents rescue 0 * 1) %></p>
   <% end %>
   <p>Your Total: <%= current_order.calculate_total %></p>

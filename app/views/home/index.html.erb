@@ -4,11 +4,16 @@
 <div class="wrapper">
 
   <% @products.each do | product|%>
-    <div>
-      <div><%= image_tag product.image, width: 200 %></div>
-      <div><%= product.name %></div>
-      <div><%= product.description %></div>
+
+      <div class="nested">
+        <div>
+          <h3><%= product.name %></h3>
+          <%= image_tag product.image, height: 200, width:200 %>
+          <%= product.description %>
+          <h3>$<%= product.formatted_price %></h3>
+      </div>
     </div>
+
   <% end %>
 
 </div>

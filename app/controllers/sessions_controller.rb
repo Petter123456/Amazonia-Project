@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
     redirect_to '/login'
   end
 
-
 def create
   user = User.find_by_email(params[:email])
   if user && user.authenticate(params[:password])
@@ -21,6 +20,7 @@ def create
       render "new"
     end
   end
+end
 
 
   def destroy
@@ -29,4 +29,3 @@ def create
     redirect_to root_url, :notice => "Logged out!"
   end
 end
-
