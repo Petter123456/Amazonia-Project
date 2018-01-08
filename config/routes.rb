@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
+
 #root
-  root 'sessions#new'
+  root 'home#index'     #home page
 
 #reset password
   # get '/password_resets' => 'password_reset#new'
@@ -14,14 +15,21 @@ Rails.application.routes.draw do
   post '/signup' => 'user#create'
 
 #path from signup
-  get '/products' => 'products#index'
-
+  get '/order' => 'order_items#index'
+  get '/cart' => 'carts#show'
 
   resources :users
+
+  resources :order_items
+  resource :cart, only: [:show]
+
   resources :sessions
   resources :password_resets
 
   resources :reviews
   resources :products
+
+  resources :charges
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

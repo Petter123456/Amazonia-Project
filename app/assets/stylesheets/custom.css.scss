@@ -1,0 +1,38 @@
+.wrapper{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr 1fr 1fr;
+  grid-gap: 2em;
+  background-color: maroon;
+  
+
+}
+
+.wrapper > div{
+  background: #eee;
+  padding: 2em;
+
+}
+
+
+.wrapper > div:nth-child(odd){
+  background: #578347;
+}
+
+.nested {
+  display: grid;
+  padding: 1em;
+
+}
+
+.nested > div {
+  display: grid;
+  padding: 1em;
+  background: #eee;
+
+}
+
+// #center-div {
+//   display:grid;
+//   background: #red;
+// }
