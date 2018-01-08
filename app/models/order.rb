@@ -4,7 +4,7 @@ class Order < ApplicationRecord
   before_create :update_status
 
   def calculate_total
-    self.order_items.collect { |item| (item.product.price_in_cents || 0) * 1 }.sum
+    self.order_items.collect { |item| (item.product.price_in_cents * item.quantity rescue 1)}.sum
   end
 
   private
@@ -18,4 +18,5 @@ class Order < ApplicationRecord
   def update_total
     self.total_price = calculate_total
   end
+
 end
