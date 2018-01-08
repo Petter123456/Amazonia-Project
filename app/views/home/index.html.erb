@@ -14,6 +14,20 @@
       <div><%= image_tag product.image, width: 200 %></div>
       <div><%= product.name %></div>
       <div><%= product.description %></div>
+
+<div>
+
+  <%= form_for @order_item do |f| %>
+    <%= f.hidden_field :quantity, value: 1 %>
+    <%= f.hidden_field :product_id, value: product.id %>
+    <%= f.submit "Add to cart" %>
+  <% end %>
+
+
+
+
+</div>
+
     </div>
   <% end %>
 
