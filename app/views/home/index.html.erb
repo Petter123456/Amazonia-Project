@@ -2,9 +2,16 @@
 <%= link_to 'Products', products_path %>
 <p>Find me in app/views/home/index.html.erb</p>
 
+
+<%= form_tag(products_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "" %>
+    <%= submit_tag "Search", :name => nil %>
+    <% end %>
+
 <div class="wrapper">
 
   <% @products.each do | product|%>
+
 
       <div class="nested">
         <div>
@@ -14,7 +21,21 @@
           <h3>$<%= product.formatted_price %></h3>
 
           <!-- <div> <%= link_to 'Back', products_path(@product) %> </div> -->
+          
+          <div>
+
+  <%= form_for @order_item do |f| %>
+    <%= f.hidden_field :quantity, value: 1 %>
+    <%= f.hidden_field :product_id, value: product.id %>
+    <%= f.submit "Add to cart" %>
+  <% end %>
+
+
+</div>
+          
       </div>
+
+
     </div>
 
   <% end %>
