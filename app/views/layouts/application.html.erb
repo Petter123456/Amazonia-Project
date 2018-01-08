@@ -6,13 +6,13 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
+
 </head>
 <body>
- 
+
     <div class="header">
       <% if current_user %>
-      Welcome <%= current_user.name %> | <%= link_to "logout", '/logout' %>
+      Welcome <%= current_user.name %> | <%= link_to "logout", '/logout' %>| <%= link_to "Go to cart", '/cart' %>| <%= link_to 'Add New Product', new_product_path %>
       <% else %>
       <%= link_to "Login", '/login' %> | <%= link_to "Sign-up", '/signup' %>
       <% end %>

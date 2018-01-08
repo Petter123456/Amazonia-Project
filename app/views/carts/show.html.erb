@@ -1,9 +1,14 @@
+<button id="back"><%= link_to 'Back to Amazonia.com', root_path %></button>
+
+
 <% if @order_items.any? %>
   <% @order_items.each do |item| %>
     <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"} %></p>
-    <p> Unit Price: <%= item.product.price_in_cents %> | Total Price: <%= (item.product.price_in_cents rescue 0 * 1) %></p>
+    <p> Unit Price: <%= item.product.price_in_cents %> |Quantity:<%=item.quantity%> | Total Price: <%= (item.product.price_in_cents * item.quantity) rescue 1 %></p>
   <% end %>
   <p>Your Total: <%= current_order.calculate_total %></p>
 <% else %>
   <p>Your shopping cart is empty.</p>
 <% end %>
+
+<button id="checkout"><%= link_to 'Go to Checkout', '/charges/new' %></button>
