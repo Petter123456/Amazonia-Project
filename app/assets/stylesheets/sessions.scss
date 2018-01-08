@@ -1,3 +1,78 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.wrapper {
+  display: grid;
+  // grid-template-columns: 200px 200px 200px;
+  grid-template-columns: 1fr 2fr 1fr;
+
+}
+
+.box1 {
+  background-color: white !important;
+
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+
+  height: 100%;
+
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 200%;
+  color: orange;
+  border-style: groove;
+
+}
+
+#email{
+  margin-top: 5%;
+  margin-left: 0.5%;
+font-size: 115%;
+}
+#password{
+  font-size: 115%;
+  margin-top: -5%;
+  margin-right: 4.2%;
+}
+
+.submit_tag{
+  margin-top: -8%;
+  margin-left: 14.5%;
+  width: 50%;
+  font-size: 200%;
+  color: orange;
+}
+#forgot_password{
+  font-size: 50%;
+  margin-top: -5%;
+  margin-left: 50%;
+}
+
+#checkbox{
+  margin-right: 36%;
+}
+#checkbox_label{
+  margin-left: -13%;
+  margin-top: -5.4%;
+}
+
+button{
+  margin-top: 0%;
+margin-left:22%;
+width: 60%;
+height: 10%;
+font-size: 120%;
+border-radius: 30%;
+border-color: orange;
+background-color: lightgrey;
+color:orange; 
+}
+
+h1{
+
+  margin-left: 22%;
+}
