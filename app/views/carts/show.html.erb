@@ -1,6 +1,15 @@
-<button id="back"><%= link_to 'Back to Amazonia.com', root_path %></button>
 
+<div class="body-class">              <!-- body class div start -->
+    <div class="jon-nav">                       <!-- start of nav  -->
+      <button id="back"><%= link_to 'Back to Amazonia.com', root_path %></button>
+    </div>                                       <!-- end of nav  -->
+    <div class="jon-wrapper jon-">        <!--jon-wrapper start  -->
+      <% if @order_items.any? %>
+        <% @order_items.each do |item| %>
 
+<div class="wrapper_empty_cart">
+  <div>
+    <nav id="first_column">
 <% if @order_items.any? %>
   <% @order_items.each do |item| %>
 
@@ -9,8 +18,18 @@
 
   <% end %>
   <p>Your Total: $<%= current_order.calculate_total %></p>
-<% else %>
-  <p>Your shopping cart is empty.</p>
-<% end %>
 
-<button id="checkout"><%= link_to 'Go to Checkout', '/charges/new' %></button>
+<% else %>
+  <p>Your Shopping Cart is empty.
+Your Shopping Cart lives to serve. Give it purpose — fill it with books, CDs, DVDs, toys, electronics, and more. If you already have an account, Sign In to see your Cart.
+Continue shopping on the <%= link_to 'Amazonia.com', root_path %>, Webpage learn about today's deals, or visit your Wish List.
+
+The price and availability of items at <%= link_to 'Amazonia.com', root_path %> are subject to change. The Cart is a temporary place to store a list of your items and reflects each item's most recent price. Shopping Cart Learn more
+
+Do you have a gift card or promotional code? We'll ask you to enter your claim code when it's time to pay.</p>
+<% end %>
+</nav>
+
+<button id="checkout"><%= link_to 'Go to Checkout', '/charges/new'%></button>
+</div>
+</div>
