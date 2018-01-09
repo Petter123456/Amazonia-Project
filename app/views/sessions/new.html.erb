@@ -5,15 +5,17 @@
 
 
 
-<div class="wrapper" background = "white">
-  <div class="box1"><h1>Sign In</h1>
+<div class="wrapper500">
+    <h1 id="id_sign_in">Sign In</h1></br>
     <%= form_tag '/login' do %>
-      <p id="email">Email: <%= text_field_tag :email %></p></br></br>
-      <p id="password">Password: <%= password_field_tag :password %></p></br>
-      <p id="forgot_password"><%= link_to "forgotten password?", new_password_reset_path %></p>
-      <div class="submit_tag"><%= submit_tag "Login", class: 'submit_tag'%></div>
+      <p id="Email">Email</p>
+        <%= text_field_tag :email, nil, class: 'special_input'%> </br></br>
+      <p id="Password">Password</p>
+      <%= password_field_tag :password %></br>
+      <%= link_to "forgotten password?", new_password_reset_path %>
+      <%= submit_tag "Login", class: 'submit_tag'%>
     <% end %>
-      <p id="checkbox"><%= check_box_tag :remember_me, 1, params[:remember_me] %></p>
-      <p id="checkbox_label"><%= label_tag :remember_me %></p>
-      <button id="signup"><%= link_to 'Sign Up!', '/signup' %></button></div>
+      <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+      <%= label_tag :remember_me %>
+      <%= link_to 'Sign Up!', '/signup' %>
 </div>

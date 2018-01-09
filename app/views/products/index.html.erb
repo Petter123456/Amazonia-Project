@@ -1,3 +1,5 @@
+<button id="back"><%= link_to 'Back to Amazonia.com', root_path %></button>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing products</h1>
@@ -28,9 +30,10 @@
             <%= f.submit "Add to cart" %>
           <% end %>
         </td>
-        <td><%= link_to 'Show', product %></td>
+        <!-- MESSAGE FROM PETTER: I COMMENTED THIS OUT BECAUSE A USER SHOULD NOT BE ABLE TO DESTROY,EDIT, ADD, OTHER PEOPLES PROUCTS -->
+        <!-- <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -53,4 +56,3 @@
 
 
 <!-- <%= link_to 'Add New Product', new_product_path %> -->
-
