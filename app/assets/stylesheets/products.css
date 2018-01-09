@@ -1,0 +1,25 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.wrapper1{
+  display: grid;
+  /*grid-template-columns: 200px 200px 200px;*/
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  color:orange;
+  margin-top: 10%;
+}
+
+h1{
+margin-right: 17%;
+margin-top: 10%;
+font-size: 130%;
+}
+
+#center{
+  border: solid;
+
+
+}

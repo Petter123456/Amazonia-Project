@@ -23,7 +23,6 @@
          <p>Find me in app/views/home/index.html.erb</p>
                                         <!-- **********   REMOVE  *********  -->
 
-
           <%= form_tag(products_path, :method => "get", id: "search-form") do %>
           <%= text_field_tag :search, params[:search], placeholder: "" %>
           <%= submit_tag "Search", :name => nil %>
@@ -37,6 +36,7 @@
                 <!-- <%= product.description %> -->
                 <h3>$<%= product.formatted_price %></h3>
                  <%= link_to 'View Product', product %>
+
 
                     <%= form_for @order_item do |f| %>
                       <%= f.hidden_field :quantity, value: 1 %>
