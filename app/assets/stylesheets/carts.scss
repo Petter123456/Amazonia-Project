@@ -2,39 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.wrapper_empty_cart{
+body{
   display: grid;
-  /*grid-template-columns: 200px 200px 200px;*/
-  grid-template-columns: 2fr 1fr 1fr;
-  margin-top: 6%;
+  justify-items: center;
+  background-color: #ddccff ;
 }
 
-#back{
-margin-top: 1%;
-}
-
-.Delete{
-font-size: 100%;
-font-weight: bold;
-color:red;
-}
-
-p{
-  // font-weight: bold;
-}
-
-#total{
-  color: darkgreen;
-  font-weight: bold;
-}
-.Product_name{
-
-  color:blue;
-}
-
-
-#checkout .Checkout{
-font-size: 110%;
-margin-top: 1%;
+.body-class{
+  background: #9966ff;
 
 }
+
+.jon-wrapper{
+  display:grid;
+  border:#333 1px solid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2em;
+  padding: 2em;
+  background-color: #ddccff;

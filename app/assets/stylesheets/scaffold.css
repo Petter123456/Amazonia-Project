@@ -1,13 +1,24 @@
-body {
+/* body {
   background-color: #fff;
   color: #333;
   margin: 33px;
+} */
+/*
+body{
+  display: grid;
+  justify-items: center;
+  background-color: #ddccff ;
+
 }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  padding: 2%;
+  margin: 2%;
+  background-color: #aa80ff;
+    justify-items: start;
 }
 
 pre {
@@ -77,4 +88,4 @@ div.actions {
 
 label {
   display: block;
-}
+} */

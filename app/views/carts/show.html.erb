@@ -1,5 +1,11 @@
-<button id="back"><%= link_to 'Back to Amazonia.com', root_path %></button>
 
+<div class="body-class">              <!-- body class div start -->
+    <div class="jon-nav">                       <!-- start of nav  -->
+      <button id="back"><%= link_to 'Back to Amazonia.com', root_path %></button>
+    </div>                                       <!-- end of nav  -->
+    <div class="jon-wrapper jon-">        <!--jon-wrapper start  -->
+      <% if @order_items.any? %>
+        <% @order_items.each do |item| %>
 
 <div class="wrapper_empty_cart">
   <div>
