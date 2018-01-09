@@ -18,7 +18,4 @@ class Product < ActiveRecord::Base
     where("name ILIKE ?", "%#{search}%")
   end
 
-
-
-
 end

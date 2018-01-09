@@ -12,10 +12,13 @@
     <nav id="first_column">
 <% if @order_items.any? %>
   <% @order_items.each do |item| %>
-    <p>Product: <%= item.product.name %> | <%= link_to "Delete", order_item_path(item),:class => 'Delete', :data => {:confirm => "You sure?", :method => "delete"} %></p>
-    <p> Unit Price: <%= item.product.price_in_cents %> | Quantity:<%=item.quantity%> | Total Price: <%= (item.product.price_in_cents * item.quantity) rescue 1 %></p> </br>
+
+    <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"} %></p>
+    <p> Unit Price: $<%= item.product.formatted_price %> |Quantity:<%=item.quantity%> | Total Price: $<%= (item.product.formatted_price * item.quantity) rescue 1 %></p>
+
   <% end %>
-  <p id="total">Your Total: <%= current_order.calculate_total %></p>
+  <p>Your Total: $<%= current_order.calculate_total %></p>
+
 <% else %>
   <p>Your Shopping Cart is empty.
 Your Shopping Cart lives to serve. Give it purpose — fill it with books, CDs, DVDs, toys, electronics, and more. If you already have an account, Sign In to see your Cart.
