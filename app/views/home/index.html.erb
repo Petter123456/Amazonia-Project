@@ -13,24 +13,12 @@
 
 
     <div class="body-class">              <!-- body class div start -->
-    <div class="jon-nav">                       <!-- start of nav  -->
-        <h1>Home#index</h1>
-        <h1><%= link_to 'View All Products', products_path %></h1>
-        <!-- <%= link_to 'View Products', products_path(@product) %> -->
-
-
-                                      <!-- **********   REMOVE  *********  -->
-         <p>Find me in app/views/home/index.html.erb</p>
-                                        <!-- **********   REMOVE  *********  -->
-
-          <%= form_tag(products_path, :method => "get", id: "search-form") do %>
-          <%= text_field_tag :search, params[:search], placeholder: "" %>
-          <%= submit_tag "Search", :name => nil %>
-          <% end %>
-    </div>                                   <!-- end of nav  -->
+    <div class="jon-nav">                       <!-- start of
+    </div>
+                          <!-- end of nav  -->
     <div class="jon-wrapper jon-">        <!--jon-wrapper start  -->
           <% @products.each do | product|%>
-            <div>         <!--unknown div start  -->
+            <div id="img_div">         <!--unknown div start  -->
                 <h3><%= product.name %></h3>
                 <%= image_tag product.image, height: 200, width:200 %>
                 <!-- <%= product.description %> -->
@@ -47,7 +35,6 @@
           <% end %>
     </div>            <!--jon-wrapper end  -->
 
-  <h1><%= link_to 'View All Products', products_path %></h1>
 
 </div>                  <!-- body class div end -->
 

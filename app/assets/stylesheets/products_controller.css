@@ -2,39 +2,3 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
-
-
-body{
-  display: grid;
-  justify-items: center;
-  background-color: #ddccff ;
-  padding: 5em;
-
-}
-
-.body-class{
-  background: #9966ff;
-
-}
-
-.products-nav {
-align-items: center;
-text-align: center;
-padding: 2%;
-margin: 2%;
-background-color: #aa80ff;
-}
-
-.jon-wrapper{
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 2em;
-  padding: 2em;
-  background-color: #ddccff;
-}
-
-/* .proudcts-nested > div {
-  border: #333 1px solid;
-
-} */
