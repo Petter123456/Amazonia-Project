@@ -2,14 +2,14 @@
 
 
 <div class="wrapper" background = "white">
-
-<div class="box1">
-<%= form_for :user do |form| %>
-<p> Name: <%= form.text_field :name %></p></br>
-<p> Email: <%= form.text_field :email %></p></br>
-<p>Password: <%= form.password_field :password %></p></br>
-<p> Confirm password: <%= form.password_field :password_confirmation %></p></br>
-<%= form.submit "Sign Up" , :class => 'submit'%>
-<% end %></div>
+  <div class="box1">
+    <%= form_for :user do |form| %>
+    <p> Name: <%= form.text_field :name %></p></br>
+    <p> Email: <%= form.text_field :email %></p></br>
+    <p>Password: <%= form.password_field :password %></p></br>
+    <p> Confirm password: <%= form.password_field :password_confirmation %></p></br>
+    <%= form.submit "Sign Up" , :class => 'submit'%>
+    <% end %>
+  </div>
 
 </div>
