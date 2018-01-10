@@ -1,50 +1,19 @@
 
 
 
-body{
-  display: grid;
-  justify-items: center;
-  background-color: #ddccff ;
-  padding: 5em;
+// body{
+//   display: grid;
+//   justify-items: center;
+//   background-color: #ddccff ;
+//   padding: 5em;
+//
+// }
 
-}
+// .body-class{
+//   background: #9966ff;
+//
+// }
 
-.body-class{
-  background: #9966ff;
-
-}
-
-.jon-nav {
-  // display: grid;
-// grid-row: 1fr;
-// grid-template-columns: 1fr 1fr 1fr;
-// grid-gap: 2%;
-align-items: center;
-text-align: center;
-padding: 2%;
-margin: 2%;
-background-color: #aa80ff;
-  justify-items: start;
-}
-
-.jon-wrapper{
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 2em;
-  padding: 2em;
-  background-color: #ddccff;
-  // margin: 2em 2em 2em 2em;
-}
-
-.jon-wrapper > div{
-  display: grid;
-  background: #eee6ff;
-  padding:  5% 5% 5% 5%;
-
-  // margin: 2em 2em 2em 2em;
-
-}
 
 
 // .jon-wrapper > div:nth-child(odd){
@@ -57,7 +26,7 @@ background-color: #aa80ff;
 //   padding: 3em;
 //
 // }
-
+//
 // .jon-nested > div {
 //   display: grid;
 //   grid-auto-rows: 1fr 1fr 1fr;
@@ -65,7 +34,189 @@ background-color: #aa80ff;
 //
 // }
 
-.item {
-  width: 50%;
-  height: 50%;
+
+// .item {
+//   width: 50%;
+//   height: 50%;
+// // }
+// body{
+//
+//   margin: 0px;
+//   padding:0;
+// }
+
+
+// REMEMEBER THIS ONE
+// .jon-wrapper{
+//   display:grid;
+//   grid-template-columns: 1fr 1fr  1fr;
+//   grid-template-rows: auto;
+//   grid-gap: 2em;
+//   padding: 2em;
+//   background-color: #ddccff;
+//   // margin: 2em 2em 2em 2em;
+// }
+
+
+// .jon-wrapper > div{
+//   display: grid;
+//   background: #eee6ff;
+//   padding:  5% 5% 5% 5%;
+//
+//   // margin: 2em 2em 2em 2em;
+// }
+
+// .jon-nav {
+//   display: grid;
+// grid-row: 1fr;
+// grid-template-columns: 1fr 1fr 1fr;
+// grid-gap: 2%;
+// align-items: center;
+// text-align: center;
+// padding: 2%;
+// margin: 2%;
+// background-color: #aa80ff;
+//   justify-items: start;
+// }
+
+
+body{
+height: 100vh;
+background: #005AA7 ;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFFDE4 , #005AA7 );  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFFDE4 , #005AA7 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
+
+.body-class{
+  background: #005AA7;
+  width: 80%;
+  margin-left: 8.7%;
+
+
+}
+
+.products-nav {
+align-items: center;
+text-align: center;
+padding: 2%;
+margin: 2%;
+background-color: white;
+}
+
+.jon-wrapper{
+ display:grid;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr;
+  grid-template-rows: auto;
+  grid-gap: 1em;
+  padding: 1em;
+  background: #005AA7 ;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #FFFDE4 , #005AA7 );  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #FFFDE4 , #005AA7 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#img_div {
+  margin-left: 50px;
+}
+#img_div a{
+
+  color:white;
+}
+
+
+ .proudcts-nested > div {
+  border: #333 1px solid;
+}
+
+
+.header{
+  font-size: 100%;
+  width: 80%;
+  margin: 0 0 0 0;
+  color:white;
+  text-align: bottom;
+  background-color: blue;
+  margin-left: 8.7%;
+}
+
+
+#img_div{
+  text-align: center;
+  max-width: 100%;
+   max-height: 100%;
+}
+
+#img_div h3{
+padding: 0px;
+margin: 0px;
+
+
+}
+
+.header a{
+  color: white;
+}
+
+.comment_form{
+margin-left: 22%;
+margin-top: 2.9%;
+width: 80%;
+height: 30px;
+border-radius: 7px;
+}
+
+.submit_form{
+margin-left: 59%;
+width: 10%;
+ height: 140%;
+}
+
+
+#search-form{
+
+  width:80%;
+}
+
+.jon-nav{
+
+  height: 100px;
+}
+
+
+// NEW.HTML.ERB------------------------------
+
+#back{
+width:10%;
+margin-top: 1%;
+}
+
+.wrapper500{
+float:right;
+text-align: center;
+width: 100%;
+color:white;
+
+}
+.wrapper500 div{
+  display: inline-block;
+  width: 30%;
+  border: 1px solid black;
+}
+// cart = SHOW.HTML.ERB------------------------------
+
+p{color:white;
+}
+
+.jon-wrapper-cart-{
+  display: inline-block;
+text-align: center;
+width: 30%;
+border: solid;
+}
+
+.wrapper_cart{
+
+  text-align: center;
 }

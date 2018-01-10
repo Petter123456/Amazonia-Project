@@ -1,4 +1,49 @@
-<h2>Thank you for your payment($<strong><%= current_order.calculate_total %></strong>), the product will be shipped to you within 1-3 business day!</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Thank you!</title>
 
-<%= link_to 'Back to Amazonia', root_path %>
-<%= link_to 'Back to your cart', '/cart' %>
+  <style media="screen" type="text/css">
+
+  h2{color: white;}
+
+  body {
+    overflow: visible !important;
+  background: -webkit-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+  background: -moz-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+  background: -ms-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+  background: -o-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+  background: linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+
+  text-align: center;
+}
+  }
+  .back_amazonia{
+    color: white;
+    background: yellowgreen;
+    width: 180;
+    border-radius: 3px;
+    padding: 5px
+}
+
+
+  #thank_you_div{
+    width:45%;
+    margin-top: 25%;
+    display: inline-block;
+  }
+
+
+</style>
+</head>
+<body>
+  <div id="thank_you_div">
+    <h2 id="thank_you">Thank you for your payment   ($ <strong><%= current_order.calculate_total %></strong>), your order will be shipped to you within 1-3 business days!</h2>
+
+    <%= link_to 'Back to Amazonia', root_path, :class => 'back_amazonia' %>
+  </div>
+</body>
+</html>

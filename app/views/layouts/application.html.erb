@@ -11,8 +11,16 @@
 <body>
 
     <div class="header">
+
+
+      <%= form_tag(products_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "" , :class => 'comment_form' %>
+
+      <%= submit_tag "&#x1F50D;", :name => nil , :class => 'submit_form'%>
+      <% end %>
+
       <% if current_user %>
-      Welcome <%= current_user.name %> | <%= link_to "logout", '/logout' %>| <%= link_to "Go to cart", '/cart' %>| <%= link_to 'Add New Product', new_product_path %>
+      Welcome <%= current_user.name %> | <%= link_to "logout", '/logout' %>| <%= link_to "Go to cart", '/cart' %>| <%= link_to 'Add New Product', new_product_path %> | <%= link_to 'View All Products', products_path %>
       <% else %>
       <%= link_to "Login", '/login' %> | <%= link_to "Sign-up", '/signup' %>
       <% end %>

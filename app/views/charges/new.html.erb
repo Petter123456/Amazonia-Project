@@ -1,22 +1,72 @@
-<h1>Checkout</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Thank you!</title>
 
-<button id="back"><%= link_to 'Back to Cart', '/cart' %></button></br>
+  <style media="screen" type="text/css">
 
-<%= form_tag charges_path do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
+  body {
+  overflow: visible !important;
+  background: -webkit-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+  /* background: -moz-linear-gradient(45deg, #085078 10%, #85d8ce 90%); */
+  /* background: -ms-linear-gradient(45deg, #085078 10%, #85d8ce 90%); */
+  /* background: -o-linear-gradient(45deg, #085078 10%, #85d8ce 90%); */
+  /* background: linear-gradient(45deg, #085078 10%, #85d8ce 90%); */
+
+  text-align: center;
+  color: white;
+  font-size: 200%;
+}
+  #back{
+    color: white;
+    background: yellowgreen;
+    width: 60%;
+    border-radius: 3px;
+    padding: 5px
+  }
+  a:visited {
+    color: white;
+    background: yellowgreen;
+    width: 180;
+    border-radius: 3px;
+    padding: 5px
+
+  }
+
+
+  .checkout{
+    width:30%;
+    margin-top: 15%;
+    display: inline-block;
+    border: solid;
+  }
+
+
+</style>
+</head>
+
+
+<div class="checkout_wrapper">
+  <div class="checkout" align="center">
+    <h1 id="checkout_header">Checkout</h1>
+      <button id="back"><%= link_to 'Back to Cart', '/cart' %></button></br></br>
+        <%= form_tag charges_path do %>
+          <% if flash[:error].present? %>
+          <%= flash[:error] %>
+        <% end %>
+    <span>Amount: $<%= current_order.calculate_total  %></span></br></br>
+    <script src="https://checkout.stripe.com/checkout.js"
+        class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-description="Payment Information"
+        data-amount= "<%= current_order.calculate_total * 100 %>"
+        data-locale="auto">
+    </script></br>
     <% end %>
-    <label class="amount">
-      <span>Amount: $<%= current_order.calculate_total %></span>
-    </label>
-  </article>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="Payment Information"
-          data-amount= "<%= current_order.calculate_total * 100 %>"
-          data-locale="auto"></script>
-<% end %>
+  </div>
+
+</div>

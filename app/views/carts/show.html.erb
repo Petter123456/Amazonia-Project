@@ -1,17 +1,15 @@
 
-<div class="body-class">              <!-- body class div start -->
-    <div class="jon-nav">                       <!-- start of nav  -->
-      <button id="back"><%= link_to 'Back to Amazonia.com', root_path %></button>
-    </div>                                       <!-- end of nav  -->
-    <div class="jon-wrapper jon-">        <!--jon-wrapper start  -->
+<button id="back"><%= link_to 'Back to Amazonia.com', root_path %></button>
+
+        <div class="wrapper_cart">                             <!-- end of nav  -->
+    <div class="jon-wrapper-cart-">        <!--jon-wrapper start  -->
       <% if @order_items.any? %>
         <% @order_items.each do |item| %>
 
 <div class="wrapper_empty_cart">
   <div>
     <nav id="first_column">
-<% if @order_items.any? %>
-  <% @order_items.each do |item| %>
+
 
     <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"} %></p>
     <p> Unit Price: $<%= item.product.formatted_price %> |Quantity:<%=item.quantity%> | Total Price: $<%= (item.product.formatted_price * item.quantity) rescue 1 %></p>
