@@ -2,24 +2,24 @@
 
 <%= image_tag @product.image.url(:thumb) %>
 
-<p>
+<p class="product_paragraph">
   <strong>Name:</strong>
   <%= @product.name %>
 </p>
 
-<p>
+<p class="product_paragraph">
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
 
-<p>
+<p class="product_paragraph">
 <strong>Price:</strong>
 <%= @product.formatted_price %>
 </p>
 
 <h3>Reviews</h3>
 <% @product.reviews.each do |review| %>
-  <p>
+  <p class="product_paragraph">
     <%= review.comment %>
     <br>
     Added on: <%= review.created_at.to_date %>

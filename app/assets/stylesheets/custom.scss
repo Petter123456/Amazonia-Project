@@ -58,13 +58,7 @@
 // }
 
 
-// .jon-wrapper > div{
-//   display: grid;
-//   background: #eee6ff;
-//   padding:  5% 5% 5% 5%;
-//
-//   // margin: 2em 2em 2em 2em;
-// }
+
 
 // .jon-nav {
 //   display: grid;
@@ -91,9 +85,9 @@ background: linear-gradient(to bottom, #FFFDE4 , #005AA7 ); /* W3C, IE 10+/ Edge
 }
 
 .body-class{
-  background: #005AA7;
+  background: #232f3e;
   width: 80%;
-  margin-left: 8.7%;
+    margin-left: 8.7%;
 
 
 }
@@ -110,35 +104,55 @@ background-color: white;
  display:grid;
   grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr;
   grid-template-rows: auto;
-  grid-gap: 1em;
+  grid-row: color black;
+  grid-gap: 1em color black;
   padding: 1em;
-  background: #005AA7 ;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #FFFDE4 , #005AA7 );  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #FFFDE4 , #005AA7 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // background: #005AA7 ;  /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to bottom, #FFFDE4 , #005AA7 );  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to bottom, #FFFDE4 , #005AA7 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: white;
+
 }
 
-#img_div {
-  margin-left: 50px;
+.jon-wrapper div{
+  display: grid;
+  background: #232f3e;
+  padding: 5%;
+  grid-template-columns: 1fr;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  color:white;
+  border-radius: 20px;
+
+
+  // margin: 2em 2em 2em 2em;
 }
+
+p, a{
+  color:greenyellow;
+}
+
+#img_div{
+align-items: center;}
+
 #img_div a{
-
   color:white;
 }
 
-
- .proudcts-nested > div {
-  border: #333 1px solid;
-}
+//
+//  .proudcts-nested > div {
+//   border: #333 1px solid;
+// }
 
 
 .header{
+  margin-top: 50px;
   font-size: 100%;
-  width: 80%;
+  width: 100%;
   margin: 0 0 0 0;
   color:white;
   text-align: bottom;
-  background-color: blue;
-  margin-left: 8.7%;
+  background-color: #232f3e;
 }
 
 
@@ -151,7 +165,7 @@ background-color: white;
 #img_div h3{
 padding: 0px;
 margin: 0px;
-
+font-size: 80%;
 
 }
 
@@ -206,17 +220,26 @@ color:white;
 }
 // cart = SHOW.HTML.ERB------------------------------
 
-p{color:white;
-}
-
 .jon-wrapper-cart-{
   display: inline-block;
 text-align: center;
-width: 30%;
-border: solid;
+width: 50%;
+margin-top: 5%;
 }
 
 .wrapper_cart{
 
   text-align: center;
+}
+
+// product search = SHOW.HTML.ERB------------------------------
+
+
+p{
+  color:white;
+}
+
+#home_all{
+float: right;
+
 }
