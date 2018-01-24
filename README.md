@@ -1,24 +1,14 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+Description:
 
-* Configuration
+A full scale online e-commerse site. Upload products, Buy & Sell. Login created with bcrypt, mailer included for password reset. Stripe integrated for payments.
 
-* Database creation
+![alt tag](https://github.com/Petter123456/Amazonia-Project/blob/master/simpleshop.png)
 
-* Database initialization
 
-* How to run the test suite
+CONTACT DETAILS:
+(0047) 46939362 · PETTER.FAGERLUND@GMAIL.COM· PETTER.FAGERLUND.COM
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
